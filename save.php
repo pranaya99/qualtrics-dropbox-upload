@@ -3,6 +3,8 @@
 // Receives video blob from Qualtrics and uploads to Dropbox
 // Folder structure: /Qualtrics_Recordings/{ResponseID}/filename.webm
 
+error_log("POST received. FILES=" . print_r($_FILES, true));
+
 header("Access-Control-Allow-Origin: *");
 
 if (!isset($_FILES["video-blob"])) {
